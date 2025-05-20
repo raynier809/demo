@@ -2,6 +2,11 @@ databaseType = "SqlServer"
 id = "819df1b8-a605-4f0f-b22a-9857d1f15b5f"
 name = "Demo-BPD"
 
+[environments.Dev]
+url = "jdbc:sqlserver://localhost;databaseName=Demo_BPD_DEV;encrypt=true;trustServerCertificate=true"
+user = "flyway_admin"
+password = "Admin123465789!"
+
 [flyway]
 defaultSchema = "dbo"
 locations = [ "filesystem:migrations" ]
@@ -17,7 +22,7 @@ majorTolerance = 0
 mode = "all"
 
 [flywayDesktop]
-developmentEnvironment = "development"
+developmentEnvironment = "Dev"
 shadowEnvironment = "shadow"
 
 [redgateCompare]
