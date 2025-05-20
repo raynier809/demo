@@ -1,0 +1,9 @@
+CREATE TABLE Cuenta (
+    CuentaID INT PRIMARY KEY IDENTITY(1,1),
+    ClienteID INT NOT NULL,
+    NumeroCuenta VARCHAR(20) NOT NULL,
+    Saldo DECIMAL(18,2) NOT NULL DEFAULT 0,
+    TipoCuentaID INT NOT NULL,
+    FechaApertura DATETIME NOT NULL DEFAULT GETDATE(),
+    EstadoID INT NOT NULL
+);

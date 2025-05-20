@@ -10,8 +10,8 @@ outOfOrder = true
 schemaModelLocation = "schema-model"
 validateMigrationNaming = true
 
-[flyway.check]
-majorTolerance = 0
+  [flyway.check]
+  majorTolerance = 0
 
 [flyway.sqlserver.clean]
 mode = "all"
@@ -23,8 +23,8 @@ shadowEnvironment = "shadow"
 [redgateCompare]
 filterFile = "filter.rgf"
 
-[redgateCompare.sqlserver]
-filterFile = "Filter.scpf"
+  [redgateCompare.sqlserver]
+  filterFile = "Filter.scpf"
 
 [redgateCompare.sqlserver.data.options.comparison]
 compressTemporaryFiles = false
@@ -115,3 +115,7 @@ ignoreWhiteSpace = true
 ignoreWithElementOrder = true
 ignoreWithEncryption = false
 ignoreWithNoCheck = true
+
+[environments.Dev]
+url = "jdbc:sqlserver://localhost;authentication=sqlPassword;databaseName=Demo_BPD_DEV;encrypt=true;trustServerCertificate=true"
+displayName = "BPD_Dev"
